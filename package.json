@@ -1,5 +1,5 @@
 {
-	"name": "npmgo",
+	"name": "@allindevelopers/npmgo",
 	"version": "0.0.0",
 	"type": "module",
 	"bin": {
