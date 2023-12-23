@@ -3,10 +3,10 @@
 	"version": "1.0.0",
 	"type": "module",
 	"bin": {
-		"ng": "dist/index.js"
+		"ng": "dist/cli.js"
 	},
 	"scripts": {
-		"build": "tsup index.ts --format esm --clean",
+		"build": "tsup index.ts cli.ts --format esm --clean",
 		"dev": "tsx watch index.ts",
 		"test": "echo \"Error: no test specified\" && exit 0"
 	},
