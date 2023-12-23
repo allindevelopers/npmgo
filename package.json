@@ -1,20 +1,29 @@
 {
 	"name": "npmgo",
-	"version": "1.0.0",
+	"version": "0.0.0",
 	"type": "module",
 	"bin": {
-		"npmgo": "tsx ./index.ts"
+		"ng": "dist/index.js"
+	},
+	"scripts": {
+		"build": "tsup index.ts --format esm --clean",
+		"dev": "tsx watch index.ts"
 	},
 	"dependencies": {
-		"@tsconfig/node20": "^20.1.2",
-		"@types/node": "^20.10.5",
 		"fuse.js": "^7.0.0",
-		"open": "^10.0.1",
-		"tsx": "^4.7.0"
+		"open": "^10.0.1"
 	},
 	"devDependencies": {
 		"@allindevelopers/prettier-config": "^1.0.0",
-		"prettier": "^3.1.1"
+		"@tsconfig/node20": "^20.1.2",
+		"@types/node": "^20.10.5",
+		"prettier": "^3.1.1",
+		"tsup": "^8.0.1",
+		"tsx": "^4.7.0",
+		"typescript": "^5.3.3"
 	},
-	"prettier": "@allindevelopers/prettier-config"
+	"prettier": "@allindevelopers/prettier-config",
+	"files": [
+		"dist"
+	]
 }
