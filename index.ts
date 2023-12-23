@@ -3,6 +3,17 @@ import open from "open";
 import Fuse from "fuse.js";
 
 let [, , pkg, go] = process.argv;
+
+if (!pkg) {
+	console.error("No package name provided");
+	process.exit(1);
+}
+
+if (!go) {
+	console.error("No destination provided");
+	process.exit(1);
+}
+
 let destinations = getDestinations();
 let fuse = new Fuse(destinations, { keys: ["title"] });
 let first = fuse.search(go).at(0);
@@ -17,7 +28,7 @@ type Destination = {
 	go: (pkg: string) => string;
 };
 
-function getDestinations() {
+function getDestinations(): Destination[] {
 	return [
 		{
 			title: "Bundlephobia",
@@ -103,5 +114,5 @@ function getDestinations() {
 			title: "TypeScript Docs",
 			go: (pkg) => `https://tsdocs.dev/search/docs/${pkg}`,
 		},
-	] satisfies Destination[];
+	];
 }

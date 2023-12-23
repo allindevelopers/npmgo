@@ -2,15 +2,19 @@
 	"name": "npmgo",
 	"version": "1.0.0",
 	"type": "module",
+	"bin": {
+		"npmgo": "tsx ./index.ts"
+	},
 	"dependencies": {
-		"@allindevelopers/prettier-config": "^1.0.0",
 		"@tsconfig/node20": "^20.1.2",
 		"@types/node": "^20.10.5",
 		"fuse.js": "^7.0.0",
-		"fuzzy": "^0.1.3",
 		"open": "^10.0.1",
-		"prettier": "^3.1.1",
 		"tsx": "^4.7.0"
+	},
+	"devDependencies": {
+		"@allindevelopers/prettier-config": "^1.0.0",
+		"prettier": "^3.1.1"
 	},
 	"prettier": "@allindevelopers/prettier-config"
 }
