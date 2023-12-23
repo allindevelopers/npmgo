@@ -1,6 +1,6 @@
 {
 	"name": "@allindevelopers/npmgo",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"type": "module",
 	"bin": {
 		"ng": "dist/cli.js"
